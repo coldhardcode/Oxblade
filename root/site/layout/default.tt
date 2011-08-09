@@ -1,0 +1,48 @@
+[%~
+DEFAULT page.left_column  = '7-24';
+DEFAULT page.main_column = '17-24';
+
+~%]
+[% PROCESS site/messages.tt %]
+[% IF page.crumbs.size %]
+<div id="crumbs">
+ <ul>
+  <li><a href="#">[% c.loc('Home') %]</a> [% c.loc('CRUMBS_SEP') %]</li>
+  [% FOREACH link = page.crumbs %]
+   [% IF loop.last %]
+   <li>[% c.loc(link.keys.0) %]</li>
+   [% ELSE %]
+   <li><a href="[% link.values.0 %]">[% c.loc(link.keys.0) %]</a> [% c.loc('CRUMBS_SEP') %]</li>
+   [% END %]
+  [% END %]
+ </ul>
+</div>
+[% END %]
+<div id="content" class="yui3-g">
+    <div class="yui3-u-[% page.left_column %]">
+    [%~
+        IF page.nav && page.nav != 'none';
+            PROCESS "site/nav/${page.nav}.tt";
+        END;
+    ~%]
+    </div>
+    <div class="yui3-u-[% page.main_column %]">
+        <div class="content">
+        [%~ 
+        IF page.cta; PROCESS site/messaging/hero.tt; END;
+        content;
+        ~%]
+        </div>
+    </div>
+    [% IF page.defined('right_column') && ( page.defined('right_column_template') || page.defined('right_column_content') ) %]
+    <div class="yui3-u-[% page.right_column %]">
+        [%
+        IF page.right_column_template;
+            foo = page.right_column_template;
+            PROCESS $foo;
+        ELSIF page.right_column_content; page.right_column_content;
+        END;
+        %]
+    </div>
+    [% END %]
+</div>

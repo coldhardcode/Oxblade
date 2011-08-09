@@ -1,0 +1,9 @@
+<div class="header yui3-g">
+    <div class="yui3-u-[% page.left_column %] logo">
+        <a href="[% c.uri_for('/') %]">[% c.loc('LOGO') %]</a>
+    </div>
+    <div class="yui3-u-[% page.main_column %] menu">
+        Header Menu Items
+    </div>
+</div>
+

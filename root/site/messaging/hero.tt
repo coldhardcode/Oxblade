@@ -1,0 +1,6 @@
+<div id="hero" class="update-remote">
+ <h3>[% c.loc('Introducing our new Poop feature!') %]</h3>
+ <h4>[% c.loc('Real poop, in real time.') %]</h4>
+ <p>[% c.loc('We can poop on your head! With poop.  From our buttholes. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.') %]</p>
+ <a class="message-closer" href="#hero"><img src="[% static('/static/images/actions/close.png') %]"></a>
+</div>

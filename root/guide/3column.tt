@@ -1,0 +1,7 @@
+[%~
+
+page.layout = '3column';
+page.right_column_template = 'guide/3column_sidebar.tt';
+
+~%]
+This is 3 column
