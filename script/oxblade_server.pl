@@ -5,13 +5,13 @@ BEGIN {
 }
 
 use Catalyst::ScriptRunner;
-Catalyst::ScriptRunner->run('BizWidgets::Web', 'Server');
+Catalyst::ScriptRunner->run('Oxblade::Web', 'Server');
 
 1;
 
 =head1 NAME
 
-bizwidgets_web_server.pl - Catalyst Test Server
+oxblade_server.pl - Catalyst Test Server
 
 =head1 SYNOPSIS
 

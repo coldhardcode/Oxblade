@@ -33,6 +33,34 @@ sub index :Path :Args(0) {
     $c->response->body( $c->welcome_message );
 }
 
+sub guide : Path('guide') Args() {
+    my ( $self, $c, $layout ) = @_;
+
+    $c->stash->{in_the_guide} = 1;
+
+    if ( defined $layout and -f $c->path_to("root/guide", "$layout.tt") ) {
+        $c->stash->{template} = "guide/$layout.tt";
+    } else {
+        $layout = undef;
+    }
+
+    if ( $c->req->method eq 'POST' and $layout ) {
+        my $dm = $c->model('DataManager');
+        if ( defined $dm->get_verifier($layout) ) {
+            my $results = $dm->verify($layout, $c->req->params);
+            if ( $results->success ) {
+                $c->message($c->loc('Valid data was passed in. Yahoo!'));
+            } else {
+                $c->message({
+                    type => 'error',
+                    message => $c->loc('This is an error message.')
+                });
+            }
+        }
+        $c->res->redirect( $c->uri_for_action('/guide', $layout) );
+    }
+}
+
 =head2 default
 
 Standard 404 error page

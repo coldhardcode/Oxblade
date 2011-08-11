@@ -65,7 +65,7 @@ END;
   </div>
   [% footer %]
   <script type="text/javascript">
-   var preferences_uri = "[% c.uri_for_action('/profile/preferences') %]";
+   var preferences_uri = "[% #c.uri_for_action('/profile/preferences') %]";
   </script>
   [% # Add footer scripts
     page.body.scripts = page.body.scripts.unique;
