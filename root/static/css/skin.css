@@ -3,14 +3,14 @@ html,body{ height: 100%; }
 #container { min-height: 100%; }
 #inner-container {
     overflow:auto;
-    padding-bottom: 150px;
+    padding-bottom: 151px;
 }
 
 div.footer {
     border-top: 1px solid #999;
     background: #ccc;
     position: relative;
-    margin-top: -150px; /* negative value of footer height */
+    margin-top: -151px; /* negative value of footer height */
     height: 150px;
     clear:both;
 }
