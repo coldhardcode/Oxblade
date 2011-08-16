@@ -1,0 +1,48 @@
+[%~
+
+page.title = c.loc("Tell us about yourself.");
+page.nav = 'registration';
+
+~%]
+<h1>[% page.title %]</h1>
+<div class="panel">
+  <form method="get" action="[% c.uri_for_action('/guide', 'business_information') %]">
+    <p>
+        Hello, my name is
+        <input type="text" name="name" placeholder="John Q. Smith">.
+    </p>
+
+    <p>
+        I am the <select name="relationship">
+            <option value="General Manager">General Manager</option>
+            <option value="Owner">Owner</option>
+        </select> of
+        <input type="text" name="business_name" placeholder="Business Name">.
+    </p>
+
+    <p>
+        We have <select name="business_count">
+            <option value="1">one location</option>
+            <option value="2-5">2-5 locations</option>
+            <option value="6-15">6-15 locations</option>
+            <option value="15+">more than 15 locations</option>.
+    </p>
+
+    <p>
+        I would like to use my email address,
+        <input type="text" name="email" placeholder="Your full email address">
+        to login.
+    </p>
+    <p>
+        My password is <input type="password" name="password">. Just
+        to be clear, my password really is
+        <input type="password" name="confirm_password">
+    </p>
+    <div class="buttons">
+        <p>
+            Ready to tell us about the businesses?
+            <input type="submit" value="Continue">
+        </p>
+    </div>
+  </form>
+</div>

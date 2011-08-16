@@ -1,0 +1,10 @@
+[%~
+
+DEFAULT page.inline_javascript = '';
+
+page.inline_javascript = BLOCK;
+    page.inline_javascript; "\n";
+    content;
+END;
+
+~%]

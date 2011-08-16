@@ -1,0 +1,11 @@
+[%~
+
+page.title = c.loc("Install the app!");
+page.nav   = 'registration';
+
+~%]
+<h1>[% page.title %]</h1>
+<p>Nearly there, up next you just need to install the Business Hours app onto your website. Don't worry, it's easier than baking buttermilk biscuits!</p>
+<div class="panel">
+    <textarea>Lots of gibberish javascript in here</textarea>
+</div>

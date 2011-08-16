@@ -76,6 +76,13 @@ END;
                         static('scripts/' _ script, undef, 1); -%]
         <script type="text/javascript" src="[% script %]"></script>
  [% END %]
- [% PROCESS site/instrumentation/googleanalytics.tt %]
+ [% #PROCESS site/instrumentation/googleanalytics.tt %]
+ [% IF page.inline_javascript %]
+ <script type="text/javascript">
+    YUI().use("substitute", "event-delegate", "io-base", "node", "json-parse", "overlay", "anim", function(Y) {
+        [% page.inline_javascript %]
+    });
+    </script>
+ [% END %]
  </body>
 </html>
