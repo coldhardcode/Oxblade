@@ -1,0 +1,61 @@
+@import "sticky-footer.less";
+
+@background: #eae9d9;
+@foreground: #3d230f;
+@base-font-size: 16px;
+
+.header {
+    background-image: url('/static/images/back.png');
+    background-repeat: repeat-x;
+    padding: 0 0 0 1em;
+}
+
+html, body {
+    background-color: @background;
+    color: @foreground;
+    font-size: @base-font-size;
+}
+header {
+    background-image: url('/static/images/back.png');
+    background-repeat: repeat-x;
+    padding: 0 0 0 1em;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: Helvetica, sans-serif;
+}
+/* Need to do real font sizes, bucko */
+h1 {
+    font-size: 2em;
+}
+
+.nav {
+    width: 80%;
+    margin: 0 auto;
+    
+    ul {
+        margin: 1em;
+
+        li {
+            margin: 1ex 1em;
+        }
+    }
+
+    .profile .avatar {
+        display: block;
+        float: left;
+        width: 64px;
+        height: 64px;
+        margin: 0 1ex 1ex 0;
+        text-align: center;
+        background: #ccc;
+        border: 2px solid #999;
+    }
+}
+
+.footer {
+    div { text-align: center; }
+    .first { text-align: left; }
+    .last { text-align: right; }
+}
+
+@import "forms.less";

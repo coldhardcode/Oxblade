@@ -39,9 +39,7 @@ DEFAULT page.head             = {};
 DEFAULT page.head.stylesheets = [
     'http://yui.yahooapis.com/3.3.0/build/cssgrids/grids-min.css'
     'yui-assets.css',
-    'screen.css',
-    'forms.css',
-    'skin.css'
+    'main.css',
 ];
 DEFAULT page.head.scripts     = [];
 DEFAULT page.body             = {};

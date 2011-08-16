@@ -44,7 +44,7 @@ FOREACH stylesheet IN page.head.stylesheets;
     stylesheet = stylesheet.match('^(https?://|/)') ?
                     stylesheet :
                     static("css/$stylesheet", 1); -%]
-   <link rel="stylesheet" href="[% stylesheet %]" type="text/css" media="screen">
+   <link rel="stylesheet" href="[% stylesheet %]" type="text/css" media="all">
 [%
 END;
 %]
