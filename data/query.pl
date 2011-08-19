@@ -1,10 +1,10 @@
 #!/bin/env perl
 
-package BizWidgets::Query::Geonames;
+package Oxblade::Query::Geonames;
 
 use Moose;
 
-extends 'BizWidgets::DataSource::Geonames';
+extends 'Oxblade::DataSource::Geonames';
 
 with 'MooseX::Getopt';
 
@@ -23,7 +23,7 @@ use strict;
 
 use Data::Dumper;
 
-my $gn = BizWidgets::Query::Geonames->new_with_options;
+my $gn = Oxblade::Query::Geonames->new_with_options;
 
 print Dumper( $gn->search( @{ $gn->extra_argv } ) );
 

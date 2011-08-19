@@ -41,8 +41,10 @@ sub search {
             total_entries    => 10,
         )
     );
-warn "Searching for @_\n";
-    my @r = $self->geonames_db->query( @_ );
+
+    #warn "Searching for " . $query->query;
+    my @r = $self->geonames_db->query( $query->query );
+
 #use Data::Dumper;
 #warn Dumper(\@r);
     my @items;
@@ -67,6 +69,7 @@ warn "Searching for @_\n";
         foreach my $key ( keys %$row ) {
             $item->set_value($key, $row->{$key});
         }
+
         push @items, $item;
     }
     $results->add( sort { $b->score <=> $a->score } @items );
@@ -77,10 +80,10 @@ sub _build_provides {
     return [ 'timezone', 'address' ];
 }
 
-before 'DESTROY' => sub {
+sub DEMOLISH {
     my ( $self ) = @_;
     $self->geonames_db->disconnect;
-};
+}
 
 no Moose;
 __PACKAGE__->meta->make_immutable;

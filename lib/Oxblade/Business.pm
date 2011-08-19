@@ -18,7 +18,7 @@ with Storage(             # Implementations for these are in this dist, at:
 
 has 'datasources' => (
     is          => 'ro',
-    isa         => 'HashRef[Oxblade::DataSource]',
+    isa         => 'HashRef',
     required    => 1,
     traits      => [ 'DoNotSerialize', 'Hash' ],
     handles     => {
@@ -29,7 +29,24 @@ has 'datasources' => (
 has 'locations' => (
     is => 'ro',
     isa => 'ArrayRef[Oxblade::Business::Location]',
-    default => sub { [] }
+    default => sub { [] },
+    traits  => [ 'Array' ],
+    handles => {
+        '_add_location' => 'push'
+    }
+);
+
+has 'locale' => (
+    is      => 'ro',
+    isa     => 'Str',
+    default => 'en_US'
+);
+
+has 'default_locale' => (
+    is      => 'ro',
+    isa     => 'Str',
+    lazy    => 1,
+    default => sub { shift->locale }
 );
 
 sub add_location {
@@ -42,13 +59,14 @@ sub add_location {
         $location = $loc_or_ref;
     } else {
         my $args = $loc_or_ref;
+
         croak "must provide at least city and state" 
-            unless $args->{city} and $args->{state};
+            unless $args->{address}->{city} and $args->{address}->{state};
 
         if ( not $args->{timezone} ) {
             # Find out what service fetches timezones.
             my $results = $self->datasource_for('timezone')->search(
-                join(", ", $args->{address}->{city}, $args->{address}->{state})
+                $args->{address}->{city}
             );
 
             foreach my $item ( @{ $results->items } ) {
@@ -61,12 +79,17 @@ sub add_location {
                 croak "Must specify timezone, could not find it from the address";
             }
         }
+
+        $args->{locale} ||= $self->default_locale;
+
         $location = Oxblade::Business::Location->new( $args );
     }
 
     croak "Invalid call to add_location, must give proper parameters or a location object" unless $location;
 
-    $self->_add_location($loc_or_ref);
+    $self->_add_location($location);
+
+    return $location;
 }
 
 sub open_locations {
