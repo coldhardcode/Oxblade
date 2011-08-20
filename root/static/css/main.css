@@ -3,11 +3,13 @@ html,body{height:100%;}
 #inner-container{overflow:auto;padding-bottom:151px;}
 footer{border-top:1px solid #999;background:#ccc;position:relative;margin-top:-151px;height:150px;clear:both;}
 body:before{content:"";height:100%;float:left;width:0;margin-top:-32767px;}
-.header{background-image:url('/static/images/back.png');background-repeat:repeat-x;padding:0 0 0 1em;}
 html,body{background-color:#eae9d9;color:#3d230f;font-size:16px;}
 header{background-image:url('/static/images/back.png');background-repeat:repeat-x;padding:0 0 0 1em;}
-h1,h2,h3,h4,h5,h6{font-family:Helvetica,sans-serif;}
-h1{font-size:2em;}
-footer div{text-align:center;}
-footer .first{text-align:left;}
-footer .last{text-align:right;}
+h1,h2,h3,h4,h5,h6{font-family:Helvetica,sans-serif;font-weight:bold;line-height:2em;}
+h1{font-size:2.125em;}
+h2{font-size:1.625em;}
+h3{font-size:1.3125em;}
+a{color:#6b1705;}
+strong{font-weight:bold;}
+em{font-style:italic;}
+#content{margin:0 1em;}

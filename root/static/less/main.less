@@ -4,12 +4,6 @@
 @foreground: #3d230f;
 @base-font-size: 16px;
 
-.header {
-    background-image: url('/static/images/back.png');
-    background-repeat: repeat-x;
-    padding: 0 0 0 1em;
-}
-
 html, body {
     background-color: @background;
     color: @foreground;
@@ -22,16 +16,30 @@ header {
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    line-height: 2em;
 }
 /* Need to do real font sizes, bucko */
 h1 {
-    font-size: 2em;
+    font-size: 2.125em; /* 34 / 16 */
 }
-
+h2 {
+    font-size: 1.625em; /* 26 / 16 */
+}
+h3 {
+    font-size: 1.3125em; /* 21 / 16 */
+}
+a {
+    color: #6b1705;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
 footer {
-    div { text-align: center; }
-    .first { text-align: left; }
-    .last { text-align: right; }
 }
 
+@import "app.less";
 @import "forms.less";
