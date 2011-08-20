@@ -88,7 +88,7 @@ sub is_open {
 sub days_open {
     my ( $self ) = @_;
 
-    my @dow  = ();
+    my @dow  = (qw/0 0 0 0 0 0 0/);
 
     while ( my $dt = $self->_ical->next ) {
         $dow[$dt->day_of_week - 1] = 1;
