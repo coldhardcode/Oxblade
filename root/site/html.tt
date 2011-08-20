@@ -22,8 +22,6 @@ END;
   <meta name="keywords" content="[% page.keywords.join(',') %]">
   [% END %]
   <meta name="author" content="[% page.author %]">
-  <meta name="google-site-verification" content="LyjTzj70CPts5PoxS9OeMFxuRe97M1HTJHqM52N609M" />
-  <meta name="msvalidate.01" content="9288C2D81C172F5901FADDE33426A357" />
   <title>[% IF page.title %][% page.title %], [% END %][% c.loc('PAGE TITLE SUFFIX') %]</title>
 [%
 # Add all javascript refs in page.head.scripts (see page.body.scripts)
@@ -49,8 +47,8 @@ FOREACH stylesheet IN page.head.stylesheets;
 END;
 %]
   <script type="text/javascript">document.documentElement.className = "yui3-loading"</script>
-  <!--[if IE]>
-   <link rel="stylesheet" type="text/css" href="/static/css/ie.css" />
+  <!--[if lt IE 9]>
+  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
  </head>
  <body class="[% page.body.classes.join(' ') %]">

@@ -1,9 +1,6 @@
-<div class="header yui3-g">
+<header>
     <div class="yui3-u-[% page.left_column %] logo">
         <a href="[% c.uri_for('/') %]"><img src="/static/images/logo.png" alt="Business Hours"></a>
     </div>
-    <div class="yui3-u-[% page.main_column %] menu">
-        Header Menu Items
-    </div>
-</div>
+</header>
 

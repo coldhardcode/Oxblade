@@ -1,32 +1,3 @@
-[%~
-MACRO render_menu_item(item) BLOCK ~%]
-    <li>[%~
-        IF item.href %]<a href="[% item.href %]">[% END;
-        item.label;
-        IF item.href %]</a>[% END;
-        IF item.children; item_list(item.children); END;
-    %]</li>[%~
-END;
-
-MACRO item_list(children) BLOCK;
-    FOREACH i IN children;
-        IF loop.first %]<ul>[% END;
-        render_menu_item(i);
-        IF loop.last %]</ul>[% END;
-    END;
-END;
-
-~%]
-<div class="nav">
-    <div class="profile">
-        <div class="avatar">Avatar Here</div>
-        <div style="margin-left: 70px;">
-            <p>
-                Joe Restaurateur<br>
-                3 notifications.<br>
-                <br><br>
-            </p>
-        </div>
-    </div>
-    [% item_list(page.navigation) %]
-</div>
+<nav>
+ Nav
+</nav>

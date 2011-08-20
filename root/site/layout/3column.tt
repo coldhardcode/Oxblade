@@ -1,8 +1,0 @@
-[%~
-
-page.main_column  = '5-12';
-page.right_column = '7-24';
-
-PROCESS 'site/layout/default.tt';
-
-~%]
