@@ -1,0 +1,5 @@
+html,body{height:100%;}
+#container{min-height:100%;}
+#inner-container{overflow:auto;padding-bottom:151px;}
+div.footer{border-top:1px solid #999;background:#ccc;position:relative;margin-top:-151px;height:150px;clear:both;}
+body:before{content:"";height:100%;float:left;width:0;margin-top:-32767px;}
