@@ -25,13 +25,56 @@
     </hgroup>
    </div>
   </section>
+
   <section>
    <div class="yui3-u-1-5">
     <h2>Miscellaneous Elements</h2>
    </div>
    <div class="yui3-u-4-5">
-     <h3>Paragraph Spans</h3>
-     <p><a href="#">Fusce dapibus</a>, <strong>tellus ac cursus commodo</strong>, <em>tortor mauris condimentum nibh</em>, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue.</p>
+    <h3>Paragraph Spans</h3>
+    <p><a href="#">Fusce dapibus</a>, <strong>tellus ac cursus commodo</strong>, <em>tortor mauris condimentum nibh</em>, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue.</p>
+   </div>
+  </section>
+
+  <section>
+   <div class="yui3-u-1">
+    <h1>Tables</h1>
+   </div>
+   <div class="yui3-u-1-5">
+    <h2>Building Tables</h2>
+   </div>
+   <div class="yui3-u-4-5">
+    <h2>Default Table</h2>
+    <table class="common">
+     <thead>
+      <tr>
+       <th>#</th>
+       <th>First Name</th>
+       <th>Last Name</th>
+       <th>Language</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>1</td>
+       <td>Some</td>
+       <td>One</td>
+       <td>English</td>
+      </tr>
+      <tr>
+       <td>2</td>
+       <td>Joe</td>
+       <td>Sixpack</td>
+       <td>English</td>
+      </tr>
+      <tr>
+       <td>3</td>
+       <td>Stu</td>
+       <td>Dent</td>
+       <td>French</td>
+      </tr>
+     </tbody>
+    </table>
    </div>
   </section>
  </div>
