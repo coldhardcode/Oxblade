@@ -35,7 +35,7 @@ END %]
         info.error = c.loc( stack.for_subject(error_name).for_level('error').first_message.id );
  END %]
     <label class="yui3-u-[% info.label_column_size %][% IF info.error %] error[% END; IF info.important %] important[% END %]" id="form_[% info.name %]_label" for="[% info.id %]"><span>[% c.loc(info.label, info.params) ~%]
-    [%~ IF info.tooltip %]<script type="text/javascript">new YAHOO.widget.Tooltip('tt_[% info.name %]_label', { context: 'form_[% info.name %]_label', text: "[% info.tooltip | replace('"', '\"') %]" } );</script>[?][% END ~%]:</span>
+    [%~ IF info.tooltip %]<script type="text/javascript">new YAHOO.widget.Tooltip('tt_[% info.name %]_label', { context: 'form_[% info.name %]_label', text: "[% info.tooltip | replace('"', '\"') %]" } );</script>[?][% END ~%]</span>
     </label>
 [% END ~%]
 

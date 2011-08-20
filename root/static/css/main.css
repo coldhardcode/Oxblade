@@ -5,10 +5,10 @@ footer{border-top:1px solid #999;background:#ccc;position:relative;margin-top:-1
 body:before{content:"";height:100%;float:left;width:0;margin-top:-32767px;}
 html,body{background-color:#eae9d9;color:#857863;font-family:Helvetica;font-size:16px;}
 header{background-image:url('/static/images/back.png');background-repeat:repeat-x;padding:0 0 0 1em;}
-h1,h2,h3,h4,h5,h6{color:#3d230f;font-family:Helvetica,sans-serif;font-weight:bold;line-height:2em;}
-h1{font-size:2.125em;}
-h2{font-size:1.625em;}
-h3{font-size:1.3125em;}
+h1,h2,h3,h4,h5,h6{color:#3d230f;font-family:Helvetica,sans-serif;font-weight:bold;line-height:1.625em;}
+h1{font-size:2.125em;line-height:1.61764705882353em;}
+h2{font-size:1.625em;line-height:1.61538461538462em;}
+h3{font-size:1.3125em;line-height:1.61904761904762em;}
 a{color:#6b1705;}
 p{margin-bottom:1em;}
 strong{font-weight:bold;}
@@ -18,4 +18,8 @@ table.common{width:100%;}table.common tbody tr:nth-child(odd){background-color:r
 table.common th,table.common td{padding:.4em;}
 table.common th{border-bottom:2px solid rgba(61, 35, 15, 0.2);color:#3d230f;font-weight:bold;}
 table.common td{border-bottom:1px solid rgba(61, 35, 15, 0.2);}
-form legend{font-weight:bold;}
+form fieldset{width:50%;}
+form legend{font-weight:bold;padding-bottom:1em;}
+form label{padding:.4em .5em .5em 0;text-align:right;width:5em;}
+form input[type="text"]{background-color:#f0f0f0;border:2px solid rgba(61, 35, 15, 0.2);color:#3d230f;padding:.2em;width:10em;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
+form input[type="text"]:focus{outline:none;background-color:#fff;border:2px solid #2580d0;-moz-box-shadow:0 0 8px #2580d0;-webkit-box-shadow:0 0 8px #2580d0;box-shadow:0 0 8px #2580d0;-moz-transition:all 0.2s ease;-o-transition:all 0.2s ease;-webkit-transition:all 0.2s ease;transition:all 0.2s ease;}

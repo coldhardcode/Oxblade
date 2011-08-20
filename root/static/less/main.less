@@ -1,12 +1,31 @@
 @import "sticky-footer.less";
 
 @background: #eae9d9;
+@background-input: #f0f0f0;
 @highlight: #3d230f;
 @foreground: #857863;
 @base-font-size: 16px;
 @border-color: rgba(61,35,15,.2);
+@border-focus-color: rgba(37,128,208,1);
 @zebra-color: rgba(61,35,15,.04);
 @link-color: #6b1705;
+
+.border-radius (@radius) {
+    -moz-border-radius: @radius;
+    -webkit-border-radius: @radius;
+    border-radius: @radius;
+}
+.box-shadow (@size, @color) {
+    -moz-box-shadow: 0 0 @size @color;
+    -webkit-box-shadow: 0 0 @size @color;
+    box-shadow: 0 0 @size @color;
+}
+.transition (@property, @duration, @function) {
+    -moz-transition: @property @duration @function;
+    -o-transition: @property @duration @function;
+    -webkit-transition: @property @duration @function;
+    transition: @property @duration @function;
+}
 
 html, body {
     background-color: @background;
@@ -23,16 +42,19 @@ h1, h2, h3, h4, h5, h6 {
     color: @highlight;
     font-family: Helvetica, sans-serif;
     font-weight: bold;
-    line-height: 2em;
+    line-height: 1.625em; /* 26 / 16 */
 }
 h1 {
     font-size: 2.125em; /* 34 / 16 */
+    line-height: 1.61764705882353em; /* 55 / 34 */
 }
 h2 {
     font-size: 1.625em; /* 26 / 16 */
+    line-height: 1.61538461538462em; /* 42 / 26 */
 }
 h3 {
     font-size: 1.3125em; /* 21 / 16 */
+    line-height: 1.61904761904762em; /* 34 / 21 */
 }
 a {
     color: @link-color;
@@ -70,7 +92,31 @@ table.common {
 }
 
 form {
+    fieldset {
+        width: 50%;
+    }
     legend {
         font-weight: bold;
+        padding-bottom: 1em;
+    }
+    label {
+        padding: .4em .5em .5em 0;
+        text-align: right;
+        width: 5em;
+    }
+    input[type="text"] {
+        background-color: @background-input;
+        border: 2px solid @border-color;
+        color: @highlight;
+        padding: .2em;
+        width: 10em;
+        .border-radius(3px);
+    }
+    input[type="text"]:focus {
+        outline: none;
+        background-color: #fff;
+        border: 2px solid @border-focus-color;
+        .box-shadow(8px, rgba(37, 128, 208, 1));
+        .transition(all, .2s, ease);
     }
 }

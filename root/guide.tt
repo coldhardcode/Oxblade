@@ -92,6 +92,8 @@
     <form>
      <fieldset>
       <legend>Form Legend</legend>
+      [% text_field({ label => 'Name' }) %]
+      [% text_field({ label => 'Much Longer Label' }) %]
      </fieldset>
     </form>
    </div>
