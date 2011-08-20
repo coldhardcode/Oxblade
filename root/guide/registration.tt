@@ -6,7 +6,7 @@ page.nav = 'registration';
 ~%]
 <h1>[% page.title %]</h1>
 <div class="panel">
-  <form method="get" action="[% c.uri_for_action('/guide', 'business_information') %]">
+  <form class="madlib" method="get" action="[% c.uri_for_action('/guide', 'business_information') %]">
     <p>
         Hello, my name is
         <input type="text" name="name" placeholder="John Q. Smith">.
@@ -16,8 +16,7 @@ page.nav = 'registration';
         I am the <select name="relationship">
             <option value="General Manager">General Manager</option>
             <option value="Owner">Owner</option>
-        </select> of
-        <input type="text" name="business_name" placeholder="Business Name">.
+        </select> of <input type="text" name="business_name" placeholder="Business Name">.
     </p>
 
     <p>
@@ -25,7 +24,8 @@ page.nav = 'registration';
             <option value="1">one location</option>
             <option value="2-5">2-5 locations</option>
             <option value="6-15">6-15 locations</option>
-            <option value="15+">more than 15 locations</option>.
+            <option value="15+">more than 15 locations</option>
+        </select>.
     </p>
 
     <p>
@@ -36,7 +36,7 @@ page.nav = 'registration';
     <p>
         My password is <input type="password" name="password">. Just
         to be clear, my password really is
-        <input type="password" name="confirm_password">
+        <input type="password" name="confirm_password">.
     </p>
     <div class="buttons">
         <p>

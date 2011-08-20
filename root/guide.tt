@@ -96,6 +96,7 @@
       [% text_field({ label => 'Much Longer Label' }) %]
       [% readonly_field({ label => 'Readonly', value => 'Uneditable' }) %]
       [% text_field({ label => 'Disabled', value => 'Disabled', disabled => 1 }) %]
+      [% select_field({ label => 'Select', array => [ 'Thing 1', 'Thing 2', 'Thing 3' ] }) %]
      </fieldset>
     </form>
    </div>

@@ -6,6 +6,7 @@
 @highlight: #3d230f;
 @foreground: #857863;
 @muted: rgba(61,35,15,.5);
+@formdata: #545454;
 
 @base-font-size: 16px;
 
@@ -73,7 +74,12 @@ strong {
 em {
     font-style: italic;
 }
-
+section {
+    margin-bottom: 2em;
+}
+footer {
+    color: #545454;
+}
 #content {
     margin: 0 2em;
 }
@@ -97,6 +103,8 @@ table.common {
 }
 
 form {
+    color: @formdata;
+
     fieldset {
         width: 50%;
     }
@@ -110,11 +118,13 @@ form {
         width: 5em;
     }
     input[type="text"],
+    input[type="password"],
+    select,
     div.readonly {
         background-color: @background-input;
         border: 2px solid @border-color;
         padding: .2em;
-        width: 10em;
+        min-width: 10em;
         .border-radius(3px);
     }
     input[type="text"]:focus {
@@ -127,6 +137,16 @@ form {
     div.readonly,
     input[disabled="disabled"] {
         background-color: #dfdfdf;
-        color: @muted;
+    }
+    select {
+        color: @formdata;
+    }
+}
+form.madlib {
+    input[type="text"],
+    input[type="password"] {
+        border: none;
+        border-bottom: 2px dashed @border-color;
+        .border-radius(5px);
     }
 }
