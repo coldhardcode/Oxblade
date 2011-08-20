@@ -42,6 +42,9 @@
    </div>
    <div class="yui3-u-1-5">
     <h2>Building Tables</h2>
+    <p>Tables are great—for a lot of things. Great tables, however, need a bit of markup love to be useful, scalable, and readable (at the code level). Here are a few tips to help.</p>
+    <p>Always wrap your column headers in a thead such that hierarchy is thead > tr > th.</p>
+    <p>Similar to the column headers, all your table’s body content should be wrapped in a tbody so your hierarchy is tbody > tr > td.</p>
    </div>
    <div class="yui3-u-4-5">
     <h2>Default Table</h2>
@@ -77,5 +80,22 @@
     </table>
    </div>
   </section>
+
+  <section>
+   <div class="yui3-u-1">
+    <h1>Forms</h1>
+   </div>
+   <div class="yui3-u-1-5">
+    <h2>Default Styles</h2>
+   </div>
+   <div class="yui3-u-4-5">
+    <form>
+     <fieldset>
+      <legend>Form Legend</legend>
+     </fieldset>
+    </form>
+   </div>
+  </section>
+
  </div>
 </article>

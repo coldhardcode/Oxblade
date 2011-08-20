@@ -3,17 +3,19 @@ html,body{height:100%;}
 #inner-container{overflow:auto;padding-bottom:151px;}
 footer{border-top:1px solid #999;background:#ccc;position:relative;margin-top:-151px;height:150px;clear:both;}
 body:before{content:"";height:100%;float:left;width:0;margin-top:-32767px;}
-html,body{background-color:#eae9d9;color:#3d230f;font-family:Helvetica;font-size:16px;}
+html,body{background-color:#eae9d9;color:#857863;font-family:Helvetica;font-size:16px;}
 header{background-image:url('/static/images/back.png');background-repeat:repeat-x;padding:0 0 0 1em;}
-h1,h2,h3,h4,h5,h6{font-family:Helvetica,sans-serif;font-weight:bold;line-height:2em;}
+h1,h2,h3,h4,h5,h6{color:#3d230f;font-family:Helvetica,sans-serif;font-weight:bold;line-height:2em;}
 h1{font-size:2.125em;}
 h2{font-size:1.625em;}
 h3{font-size:1.3125em;}
 a{color:#6b1705;}
+p{margin-bottom:1em;}
 strong{font-weight:bold;}
 em{font-style:italic;}
 #content{margin:0 1em;}
-table.common{width:100%;}table.common tbody tr:nth-child(odd){background-color:rgba(61, 35, 15, 0.05);}
+table.common{width:100%;}table.common tbody tr:nth-child(odd){background-color:rgba(61, 35, 15, 0.04);}
 table.common th,table.common td{padding:.4em;}
-table.common th{border-bottom:2px solid rgba(61, 35, 15, 0.2);font-weight:bold;}
+table.common th{border-bottom:2px solid rgba(61, 35, 15, 0.2);color:#3d230f;font-weight:bold;}
 table.common td{border-bottom:1px solid rgba(61, 35, 15, 0.2);}
+form legend{font-weight:bold;}

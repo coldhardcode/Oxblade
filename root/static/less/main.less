@@ -1,8 +1,12 @@
 @import "sticky-footer.less";
 
 @background: #eae9d9;
-@foreground: #3d230f;
+@highlight: #3d230f;
+@foreground: #857863;
 @base-font-size: 16px;
+@border-color: rgba(61,35,15,.2);
+@zebra-color: rgba(61,35,15,.04);
+@link-color: #6b1705;
 
 html, body {
     background-color: @background;
@@ -16,11 +20,11 @@ header {
     padding: 0 0 0 1em;
 }
 h1, h2, h3, h4, h5, h6 {
+    color: @highlight;
     font-family: Helvetica, sans-serif;
     font-weight: bold;
     line-height: 2em;
 }
-/* Need to do real font sizes, bucko */
 h1 {
     font-size: 2.125em; /* 34 / 16 */
 }
@@ -31,7 +35,10 @@ h3 {
     font-size: 1.3125em; /* 21 / 16 */
 }
 a {
-    color: #6b1705;
+    color: @link-color;
+}
+p {
+    margin-bottom: 1em;
 }
 strong {
     font-weight: bold;
@@ -39,6 +46,31 @@ strong {
 em {
     font-style: italic;
 }
-@import "app.less";
-@import "table.less";
-@import "forms.less";
+
+#content {
+    margin: 0 1em;
+}
+
+table.common {
+    width: 100%;
+    tbody tr:nth-child(odd) {
+        background-color: @zebra-color;
+    }
+    th, td {
+        padding: .4em;
+    }
+    th {
+        border-bottom: 2px solid @border-color;
+        color: @highlight;
+        font-weight: bold;
+    }
+    td {
+        border-bottom: 1px solid @border-color;
+    }
+}
+
+form {
+    legend {
+        font-weight: bold;
+    }
+}
