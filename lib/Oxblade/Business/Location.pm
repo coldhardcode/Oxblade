@@ -24,7 +24,6 @@ has 'locale' => (
     }
 );
 
-
 has 'address' => (
     is          => 'ro',
     isa         => 'HashRef',
@@ -39,16 +38,30 @@ has 'timezone' => (
 
 has 'hours' => (
     is   => 'ro',
-    isa  => 'Oxblade::Business::Location::Hours',
-    lazy => 1,
-    default => sub { Oxblade::Business::Location::Hours->new },
+    isa  => 'ArrayRef[Oxblade::Business::Location::Hours]',
+    default => sub { [] },
+    traits  => [ 'Array' ],
     handles => {
         'add_hours_exception' => 'add_hours_exception',
-        'is_open'       => 'is_open',
-        'hours_by_day'  => 'hours_by_day',
-        'hours_for'     => 'hours_for',
     }
 );
+
+=method is_open(?$dt?)
+
+Is this location open on the specified date? If not specified, defaults to now.
+
+=cut
+
+sub is_open {
+    my ( $self, $dt ) = @_;
+    $dt ||= DateTime->now( timezone  => $self->timezone );
+
+    foreach my $hour ( $self->all_hours ) {
+        return 1 if $hour->is_open;
+    }
+
+    return 0;
+}
 
 no Moose;
 __PACKAGE__->meta->make_immutable; 1;
