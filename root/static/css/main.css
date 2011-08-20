@@ -13,7 +13,7 @@ a{color:#2580d0;}
 p{margin-bottom:1em;}
 strong{font-weight:bold;}
 em{font-style:italic;}
-#content{margin:0 1em;}
+#content{margin:0 2em;}
 table.common{width:100%;}table.common tbody tr:nth-child(odd){background-color:rgba(61, 35, 15, 0.04);}
 table.common th,table.common td{padding:.4em;}
 table.common th{border-bottom:2px solid rgba(61, 35, 15, 0.2);color:#3d230f;font-weight:bold;}
@@ -21,5 +21,6 @@ table.common td{border-bottom:1px solid rgba(61, 35, 15, 0.2);}
 form fieldset{width:50%;}
 form legend{font-weight:bold;padding-bottom:1em;}
 form label{padding:.4em .5em .5em 0;text-align:right;width:5em;}
-form input[type="text"]{background-color:#f0f0f0;border:2px solid rgba(61, 35, 15, 0.2);color:#3d230f;padding:.2em;width:10em;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
+form input[type="text"],form div.readonly{background-color:#f0f0f0;border:2px solid rgba(61, 35, 15, 0.2);padding:.2em;width:10em;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
 form input[type="text"]:focus{outline:none;background-color:#fff;border:2px solid #2580d0;-moz-box-shadow:0 0 8px #2580d0;-webkit-box-shadow:0 0 8px #2580d0;box-shadow:0 0 8px #2580d0;-moz-transition:all 0.2s ease;-o-transition:all 0.2s ease;-webkit-transition:all 0.2s ease;transition:all 0.2s ease;}
+form div.readonly,form input[disabled="disabled"]{background-color:#dfdfdf;color:rgba(61, 35, 15, 0.5);}

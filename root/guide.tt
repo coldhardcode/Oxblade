@@ -92,8 +92,10 @@
     <form>
      <fieldset>
       <legend>Form Legend</legend>
-      [% text_field({ label => 'Name' }) %]
+      [% text_field({ label => 'Name', hint => 'A hint' }) %]
       [% text_field({ label => 'Much Longer Label' }) %]
+      [% readonly_field({ label => 'Readonly', value => 'Uneditable' }) %]
+      [% text_field({ label => 'Disabled', value => 'Disabled', disabled => 1 }) %]
      </fieldset>
     </form>
    </div>

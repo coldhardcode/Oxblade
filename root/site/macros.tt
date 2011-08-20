@@ -77,7 +77,7 @@ END ~%]
  <div class="yui3-u-1-2 ro [%~ IF info.extra || info.error %] message [% END ~%][%~ IF info.error %] error[% END %]">
      <input type="hidden" id="form_[% info.name %]" name="[% info.name %]" value="[% info.value | html %]"/><span>
   [%~ IF info.link %]<a href="[% info.link %]">[%~ END ~%]
-  [% info.value %]
+  <div class="readonly">[% info.value %]</div>
   [%~ IF info.link ~%]</a>[%~ END ~%]</span>
  </div>
  [% IF info.more %]<div class="yui3-u-1-4 more">[% c.loc(info.more) %]</div>[% END %]

@@ -2,11 +2,16 @@
 
 @background: #eae9d9;
 @background-input: #f0f0f0;
+
 @highlight: #3d230f;
 @foreground: #857863;
+@muted: rgba(61,35,15,.5);
+
 @base-font-size: 16px;
+
 @border-color: rgba(61,35,15,.2);
 @border-focus-color: rgba(37,128,208,1);
+
 @zebra-color: rgba(61,35,15,.04);
 @link-color: rgba(37, 128, 208, 1);
 
@@ -70,7 +75,7 @@ em {
 }
 
 #content {
-    margin: 0 1em;
+    margin: 0 2em;
 }
 
 table.common {
@@ -104,10 +109,10 @@ form {
         text-align: right;
         width: 5em;
     }
-    input[type="text"] {
+    input[type="text"],
+    div.readonly {
         background-color: @background-input;
         border: 2px solid @border-color;
-        color: @highlight;
         padding: .2em;
         width: 10em;
         .border-radius(3px);
@@ -118,5 +123,10 @@ form {
         border: 2px solid @border-focus-color;
         .box-shadow(8px, rgba(37, 128, 208, 1));
         .transition(all, .2s, ease);
+    }
+    div.readonly,
+    input[disabled="disabled"] {
+        background-color: #dfdfdf;
+        color: @muted;
     }
 }
