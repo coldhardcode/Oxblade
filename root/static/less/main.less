@@ -120,8 +120,11 @@ form {
         text-align: right;
         width: 5em;
     }
-    input type{
-    }
+    input[type="number"],
+    input[type="text"],
+    input[type="password"] {
+    	-webkit-appearance: none; // Hide shadows in Mobile Safari
+	}
     input[type="number"],
     input[type="text"],
     input[type="password"],
@@ -132,7 +135,6 @@ form {
         .border-radius(3px);
         padding: .2em .2em .1em .2em;
         min-width: 10em;
-    	-webkit-appearance: none; // Hide shadows in Mobile Safari
     }
     input[type="number"]:focus,
     input[type="text"]:focus {

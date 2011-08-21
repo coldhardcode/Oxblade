@@ -23,7 +23,8 @@ table.common td{border-bottom:1px solid #d8d3cf;}
 form{color:#545454;}form fieldset{width:50%;}
 form legend{font-weight:bold;padding-bottom:1em;}
 form label{padding:.3em .5em .3em 0;text-align:right;width:5em;}
-form input[type="number"],form input[type="text"],form input[type="password"],form select,form div.readonly{background-color:#f0f0f0;border:2px solid #d8d3cf;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;padding:.2em .2em .1em .2em;min-width:10em;-webkit-appearance:none;}
+form input[type="number"],form input[type="text"],form input[type="password"]{-webkit-appearance:none;}
+form input[type="number"],form input[type="text"],form input[type="password"],form select,form div.readonly{background-color:#f0f0f0;border:2px solid #d8d3cf;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;padding:.2em .2em .1em .2em;min-width:10em;}
 form input[type="number"]:focus,form input[type="text"]:focus{outline:none;background-color:#fff;border:2px solid #2580d0;-moz-box-shadow:0 0 8px #2580d0;-webkit-box-shadow:0 0 8px #2580d0;box-shadow:0 0 8px #2580d0;-moz-transition:all 0.2s ease;-o-transition:all 0.2s ease;-webkit-transition:all 0.2s ease;transition:all 0.2s ease;}
 form div.readonly,form input[disabled="disabled"]{background-color:#dfdfdf;color:#646464;}
 form select{color:#545454;}
