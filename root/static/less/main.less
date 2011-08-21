@@ -7,11 +7,14 @@
 @foreground: #857863;
 @muted: rgba(61,35,15,.5);
 @formdata: #545454;
+@form-imp: #ffc0c0;
+
 
 @base-font-size: 16px;
 
-@border-color: rgba(61,35,15,.2);
+@border-color: #d8d3cf;
 @border-focus-color: rgba(37,128,208,1);
+@border-imp: #f18f8f;
 
 @zebra-color: rgba(61,35,15,.04);
 @link-color: rgba(37, 128, 208, 1);
@@ -113,20 +116,25 @@ form {
         padding-bottom: 1em;
     }
     label {
-        padding: .4em .5em .5em 0;
+        padding: .3em .5em .3em 0;
         text-align: right;
         width: 5em;
     }
+    input type{
+    }
+    input[type="number"],
     input[type="text"],
     input[type="password"],
     select,
     div.readonly {
         background-color: @background-input;
         border: 2px solid @border-color;
-        padding: .2em;
-        min-width: 10em;
         .border-radius(3px);
+        padding: .2em .2em .1em .2em;
+        min-width: 10em;
+    	-webkit-appearance: none; // Hide shadows in Mobile Safari
     }
+    input[type="number"]:focus,
     input[type="text"]:focus {
         outline: none;
         background-color: #fff;
@@ -137,6 +145,7 @@ form {
     div.readonly,
     input[disabled="disabled"] {
         background-color: #dfdfdf;
+        color: #646464;
     }
     select {
         color: @formdata;
@@ -149,4 +158,65 @@ form.madlib {
         border-bottom: 2px dashed @border-color;
         .border-radius(5px);
     }
+}
+form.hours {
+	> div {
+		margin-bottom: .5em;
+		text-align: top;
+	}
+	label {
+		display: inline-block;
+		font-weight: bold;
+		text-align: right;
+		width: 6em;
+	}
+	input[type="number"] {
+		min-width: 2em;
+        padding: .2em .2em .1em .2em;
+		text-align: center;
+		width: 2em;
+	}
+	input[type="number"]::-webkit-inner-spin-button,
+	input[type="number"]::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+	div.weekend {
+		border: 2px solid @border-color;
+        .border-radius(5px);
+		background-color: #fff;
+		display: inline-block;
+		margin-top: 1em;
+		padding: .5em 1em .3em 0;
+
+		> div {
+			margin-bottom: .5em;
+		}
+	}
+	label.checky {
+		background-color: @background-input;
+		border: 2px solid @border-color;
+        .border-radius(5px);
+		font-weight: normal;
+        margin-left: 1em;
+		padding: 0 .4em 0 .2em;
+		width: 5.2em;
+
+		input[type="checkbox"] {
+			margin-right: .15em;
+		}
+
+		span {
+			display: inline-block;
+			padding: .3em .2em .2em 0;
+		}
+	}
+	label.closed {
+		background-color: @form-imp;
+		border-color: @border-imp;
+
+		span {
+			border-color: @border-imp;
+		}
+	}
 }
