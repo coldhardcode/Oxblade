@@ -9,52 +9,52 @@ page.nav = 'registration';
   <form class="hours" method="get" action="[% c.uri_for_action('/guide', 'business_information') %]">
    <div>
     <label>Monday</label>
-    <input type="number" name="monday_open_hour" value="8"> : <input type="number" name="monday_open_minute" value="00">
+    <input type="text" name="monday_open" value="8:00a">
     to
-    <input type="number" name="monday_close_hour" value="5"> : <input type="number" name="monday_close_minute" value="00">
+    <input type="text" name="monday_close" value="5:00p">
     <label for="monday_closed" class="checky" onclick=""><input type="checkbox" id="monday_closed" name="monday_closed"> <span>Closed</span></label>
    </div>
    <div>
     <label>Tuesday</label>
-    <input type="number" name="tuesday_open_hour" value="8"> : <input type="number" name="tuesday_open_minute" value="00">
+    <input type="text" name="tuesday_open" value="8:00a">
     to
-    <input type="number" name="tuesday_close_hour" value="5"> : <input type="number" name="tuesday_close_minute" value="00">
+    <input type="text" name="tuesday_close" value="5:00p">
     <label for="tuesday_closed" class="checky" onclick=""><input type="checkbox" id="tuesday_closed" name="monday_closed"> <span>Closed</span></label>
    </div>
    <div>
     <label>Wednesday</label>
-    <input type="number" name="wednesday_open_hour" value="8"> : <input type="number" name="wednesday_open_minute" value="00">
+    <input type="text" name="wednesday_open" value="8:00a">
     to
-    <input type="number" name="wednesday_close_hour" value="5"> : <input type="number" name="wednesday_close_minute" value="00">
+    <input type="text" name="wednesday_close" value="5:00p">
     <label for="wednesday_closed" class="checky" onclick=""><input type="checkbox" id="wednesday_closed" name="monday_closed"> <span>Closed</span></label>
    </div>
    <div>
     <label>Thursday</label>
-    <input type="number" name="thursday_open_hour" value="8"> : <input type="number" name="thursday_open_minute" value="00">
+    <input type="text" name="thursday_open" value="8:00a">
     to
-    <input type="number" name="thursday_close_hour" value="5"> : <input type="number" name="thursday_close_minute" value="00">
+    <input type="text" name="thursday_close" value="5:00p">
     <label for="thursday_closed" class="checky" onclick=""><input type="checkbox" id="thursday_closed" name="monday_closed"> <span>Closed</span></label>
    </div>
    <div class="weekend">
     <div>
      <label>Friday</label>
-     <input type="number" name="friday_open_hour" value="8"> : <input type="number" name="friday_open_minute" value="00">
+     <input type="text" name="friday_open" value="8:00a">
      to
-     <input type="number" name="friday_close_hour" value="5"> : <input type="number" name="friday_close_minute" value="00">
+     <input type="text" name="friday_close" value="5:00p">
      <label for="friday_closed" class="checky" onclick=""><input type="checkbox" id="friday_closed" name="monday_closed"> <span>Closed</span></label>
     </div>
     <div>
      <label>Saturday</label>
-     <input type="number" name="saturday_open_hour" value="8"> : <input type="number" name="saturday_open_minute" value="00">
+     <input type="text" name="saturday_open" value="8:00a">
      to
-     <input type="number" name="saturday_close_hour" value="5"> : <input type="number" name="saturday_close_minute" value="00">
+     <input type="text" name="saturday_close" value="5:00p">
      <label for="saturday_closed" class="checky" onclick=""><input type="checkbox" id="saturday_closed" name="monday_closed"> <span>Closed</span></label>
     </div>
     <div>
      <label>Sunday</label>
-     <input type="number" name="sunday_open_hour" value="8" disabled="disabled"> : <input type="number" name="sunday_open_minute" value="00" disabled="disabled">
+     <input type="text" name="sunday_open" value="8:00a" disabled="disabled">
      to
-     <input type="number" name="sunday_close_hour" value="5" disabled="disabled"> : <input type="number" name="sunday_close_minute" value="00" disabled="disabled">
+     <input type="text" name="sunday_close" value="5:00p" disabled="disabled">
      <label for="sunday_closed" class="checky closed" onclick=""><input type="checkbox" id="sunday_closed" name="monday_closed" checked> <span>Closed</span></label>
     </div>
    </div>

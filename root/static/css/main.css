@@ -31,8 +31,8 @@ form select{color:#545454;}
 form.madlib input[type="text"],form.madlib input[type="password"]{border:none;border-bottom:2px dashed #d8d3cf;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
 form.hours>div{margin-bottom:.5em;text-align:top;}
 form.hours label{display:inline-block;font-weight:bold;text-align:right;width:6em;}
-form.hours input[type="number"]{min-width:2em;padding:.2em .2em .1em .2em;text-align:center;width:2em;}
-form.hours input[type="number"]::-webkit-inner-spin-button,form.hours input[type="number"]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0;}
+form.hours input[type="text"]{min-width:2em;padding:.2em .2em .1em .2em;text-align:center;width:4em;}
+form.hours input[type="text"]::-webkit-inner-spin-button,form.hours input[type="text"]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0;}
 form.hours div.weekend{border:2px solid #d8d3cf;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background-color:#fff;display:inline-block;margin-top:1em;padding:.5em 1em .3em 0;}form.hours div.weekend>div{margin-bottom:.5em;}
 form.hours label.checky{background-color:#f0f0f0;border:2px solid #d8d3cf;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;font-weight:normal;margin-left:1em;padding:0 .4em 0 .2em;width:5.2em;}form.hours label.checky input[type="checkbox"]{margin-right:.15em;}
 form.hours label.checky span{display:inline-block;padding:.3em .2em .2em 0;}
