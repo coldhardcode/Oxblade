@@ -78,6 +78,9 @@ page.nav   = 'registration';
     ul.days li label {
         display: block;
         border-right: 1px solid #ccc;
+        padding: 0; margin: 0;
+        width: auto;
+        text-align: center;
     }
     ul.days li.selected { background: #ccc; }
     ul.days li input { display: block; margin-top: 2em; }
